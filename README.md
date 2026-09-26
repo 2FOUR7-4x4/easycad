@@ -56,6 +56,12 @@ Get-FileHash .\EasyCAD-Setup-1.0.0.exe -Algorithm SHA256
 
 Installed copies check here for new versions and offer them — nothing downloads without you agreeing. Skip a version and it stops asking about that one.
 
+## Privacy
+
+EasyCAD collects nothing. No accounts, no telemetry, no analytics, no ads. Your models never leave your computer. The only network request it makes is a version check against this repository, and the Microsoft Store edition does not even do that.
+
+Full detail: **[Privacy Policy](PRIVACY.md)**
+
 ## Releases only
 
 This repository hosts the published builds. The source is not part of it.
