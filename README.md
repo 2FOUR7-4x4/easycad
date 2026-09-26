@@ -37,7 +37,12 @@ The installer is not yet code-signed, so Windows may object in one of two ways:
 
 **"Windows protected your PC"** — this is SmartScreen. Click **More info → Run anyway**.
 
-**Smart App Control blocks it outright**, with no way to continue. This is a different, stricter feature, and there is genuinely no per-app override — Microsoft's own documentation says so. Your options are to turn Smart App Control off, which is effectively permanent (Windows will not let you switch it back on without reinstalling), or to wait for the signed Microsoft Store release. Turning off a security feature to run this app is not something I would recommend.
+**Smart App Control blocks it outright**, with no "Run anyway" option. This is a different, stricter feature than SmartScreen and there is genuinely no per-app override.
+
+You have two choices:
+
+- **Wait for the Microsoft Store release**, which is signed by Microsoft and installs normally. This is the better option and it is being worked on.
+- **Turn Smart App Control off temporarily**, install, then turn it back on. On current Windows 11 this is reversible — Microsoft added the ability to toggle SAC without a clean install in KB5079391 (26 March 2026). It is under Settings › Privacy & security › Windows Security › App & browser control › Smart App Control settings. If your Windows predates that update the switch is still one-way, so check your build first.
 
 Signing is being sorted out. Until then, you can verify your download is genuine by checking it against `SHA256SUMS.txt` on the release:
 
