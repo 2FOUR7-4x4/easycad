@@ -31,7 +31,19 @@ Download **`EasyCAD Setup x.y.z.exe`** from the [latest release](https://github.
 
 A **portable** build is also published if you would rather not install — it runs straight from the exe, though it starts slower because it unpacks itself each time.
 
-Windows will likely show a *"Windows protected your PC"* warning on first run, because the installer is not code-signed. Click **More info → Run anyway**. Code signing requires a paid certificate.
+### If Windows blocks it
+
+The installer is not yet code-signed, so Windows may object in one of two ways:
+
+**"Windows protected your PC"** — this is SmartScreen. Click **More info → Run anyway**.
+
+**Smart App Control blocks it outright**, with no way to continue. This is a different, stricter feature, and there is genuinely no per-app override — Microsoft's own documentation says so. Your options are to turn Smart App Control off, which is effectively permanent (Windows will not let you switch it back on without reinstalling), or to wait for the signed Microsoft Store release. Turning off a security feature to run this app is not something I would recommend.
+
+Signing is being sorted out. Until then, you can verify your download is genuine by checking it against `SHA256SUMS.txt` on the release:
+
+```powershell
+Get-FileHash .\EasyCAD-Setup-1.0.0.exe -Algorithm SHA256
+```
 
 **Requires:** Windows 10 or later, 64-bit.
 
